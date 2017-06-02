@@ -19,11 +19,15 @@ $(document).ready(function(){
 
 	$('#photo-form').submit(function(event){
 		event.preventDefault()
-		let image = $('#img-url').val()
-		imageList.addImage(image)
-		$('#photo-list').html(imageList.render())
-		$('#img-url').val('') 
-
+		let $image = $('#img-url')
+		let $caption = $('#caption-txt')
+		let $photolist = $('#photo-list')
+		let image = $image.val()
+		let caption = $caption.val()
+		imageList.addImage(image, caption)
+		$photolist.html(imageList.render())
+		$image.val('') 
+		$caption.val('')
 	})
 
 

@@ -6,7 +6,7 @@ class Caption{
 
 
 	render(){
-		return `<li>${this.text}</li>`
+		return `<li>${this.txt}</li>`
 	}
 
 }

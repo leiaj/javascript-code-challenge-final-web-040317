@@ -12,9 +12,10 @@ class ImageList{
 		return `<ul>${lis}</ul>`
 	}
 
-	addImage(url){
+	addImage(url, txt){
 		const image = new Image(url)
-		this.images.push(image)
+		const caption = new Caption(txt)
+		this.images.push(image, caption)
 	}
 
 
